@@ -3,11 +3,15 @@
   "name": "transfacer",
   "version": "0.1.0",
   "main": "src/browser/main.js",
-  "devDependencies": {
+  "dependencies": {
     "jquery": "2.*",
-    "gulp": "^3.8.8",
-    "laravel-elixir": "*",
     "bootstrap": "*",
-    "bootswatch": "*"
+    "bootswatch": "*",
+    "selectize": "*",
+    "dropbox": "*",
+    "file": "*",
+    "conf.js": "*"
+  },
+  "devDependencies": {
   }
 }
