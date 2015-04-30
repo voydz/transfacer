@@ -3,7 +3,7 @@
 <head>
     <title>Hello World!</title>
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="../node_modules/bootswatch/superhero/bootstrap.min.css" />
+    <link rel="stylesheet" data-theme href="../node_modules/bootswatch/superhero/bootstrap.min.css" />
 </head>
 <body>
 <div class="container">
@@ -41,6 +41,6 @@
 <script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <!-- load app -->
-<script>require('../src/app/main')();</script>
+<script>require('../src/app/main')(window, jQuery);</script>
 </body>
 </html>
