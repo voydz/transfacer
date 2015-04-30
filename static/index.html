@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../node_modules/bootswatch/superhero/bootstrap.min.css" />
+</head>
+<body>
+<div class="container">
+    <h1>Hello World!</h1>
+    We are using io.js <script>document.write(process.version)</script>
+    and Electron <script>document.write(process.versions['electron'])</script>.
+</div>
+<script>
+    // init javascript app
+    window.$ = window.jQuery = require('jquery');
+</script>
+<script type="text/javascript" src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../bundle.js"></script>
+</body>
+</html>
