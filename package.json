@@ -9,8 +9,8 @@
     "bootswatch": "*",
     "selectize": "*",
     "dropbox": "*",
-    "file": "*",
-    "conf.js": "*"
+    "conf.js": "*",
+    "wow-toc": "*"
   },
   "devDependencies": {
   }

@@ -1,18 +1,6 @@
-var path = require('path');
-var settings = require ('./modules/Settings');
+var App = require('./modules/App');
 
 module.exports = function(window, $) {
 
-    // simple test
-    setTheme($, settings.get('app.theme'));
+    new App(window, $)
 };
-
-function setTheme($, name)
-{
-    var base = '../node_modules/bootswatch';
-    var file = 'bootstrap.min.css';
-
-    $('link[data-theme]').attr('href', path.join(base, name, file));
-}
-
-

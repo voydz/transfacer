@@ -1,11 +1,22 @@
 {
   "app": {
-    "theme": "superhero"
+    "theme": "superhero",
+    "service": "file"
   },
 
-  "dropbox": {
+  "services": {
+    "file": {
+      "path": "~/.transfacer/Interfaces"
+    },
+
+    "dropbox": {
+      "path": "Transfacer/Interfaces",
+      "token": ""
+    }
   },
+
 
   "warcraft": {
+    "path": "/Applications/World of Warcraft"
   }
 }
