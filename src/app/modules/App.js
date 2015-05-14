@@ -1,6 +1,7 @@
 var settings = require('./Settings');
 var Theme = require('./Theme');
 var Addon = require('./Addon');
+var Profile = require('./Profile');
 
 /**
  * main application
@@ -9,7 +10,8 @@ var Addon = require('./Addon');
  * @param jQuery
  * @constructor
  */
-var App = function(window, jQuery) {
+var App = function(window, jQuery)
+{
     this.$window = window;
     this.$jquery = jQuery;
 
@@ -19,8 +21,8 @@ var App = function(window, jQuery) {
 /**
  * init application
  */
-App.prototype.boot = function() {
-
+App.prototype.boot = function()
+{
     // set theme
     this._bootTheme();
 
@@ -30,8 +32,17 @@ App.prototype.boot = function() {
     // load app backbone
     this.$addons = new Addon(this.$service);
 
+    this.$profiles = new Profile(this.$service);
+
     //console.log(this.$addons.all());
     //console.log(JSON.stringify(this.$addons.get('ElvUI')))
+
+    this.$profiles.backup(function(err) {
+        //if (err)
+            //console.log(err);
+
+        console.log("finished");
+    });
 }
 
 /**
@@ -39,8 +50,8 @@ App.prototype.boot = function() {
  *
  * @private
  */
-App.prototype._bootTheme = function() {
-
+App.prototype._bootTheme = function()
+{
     var theme = new Theme(this.$jquery);
     theme.load(settings.get('app.theme'));
 }
@@ -50,8 +61,8 @@ App.prototype._bootTheme = function() {
  *
  * @private
  */
-App.prototype._bootService = function() {
-
+App.prototype._bootService = function()
+{
     var Service = null;
     var config = settings.get('app.service');
 

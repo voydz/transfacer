@@ -6,7 +6,8 @@ var path = require('path');
  * @param jQuery
  * @constructor
  */
-var Theme = function(jQuery) {
+var Theme = function(jQuery)
+{
     this.$jquery = jQuery;
 };
 
@@ -16,7 +17,8 @@ var Theme = function(jQuery) {
  *
  * @param name
  */
-Theme.prototype.load = function(name) {
+Theme.prototype.load = function(name)
+{
     var $ = this.$jquery;
     var link = $('link[data-theme]');
 

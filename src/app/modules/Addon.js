@@ -1,6 +1,5 @@
 var path = require('path');
 var wowtoc = require('wow-toc');
-var settings = require('./Settings');
 
 /**
  * addon handling class
@@ -9,10 +8,11 @@ var settings = require('./Settings');
  * @param basepath
  * @constructor
  */
-var Addon = function(filesystem, basepath) {
+var Addon = function(filesystem)
+{
     this.$filesystem = filesystem;
 
-    this.setPath(basepath || settings.get('warcraft.path'))
+    this.setPath(this.$filesystem.$warcraftPath);
 };
 
 /**
@@ -32,7 +32,8 @@ Addon.prototype.setPath = function(basepath)
  * lists all currently installed addons
  * @returns {*}
  */
-Addon.prototype.all = function() {
+Addon.prototype.all = function()
+{
 
     return this.$filesystem
         .list(this.$addonPath);
@@ -44,7 +45,8 @@ Addon.prototype.all = function() {
  * @param addon
  * @returns {{Name, Version}}
  */
-Addon.prototype.get = function (addon) {
+Addon.prototype.get = function (addon)
+{
     var content = this._readToc(addon);
     var data = this._parseToc(content);
 
@@ -58,7 +60,8 @@ Addon.prototype.get = function (addon) {
  * @returns {*}
  * @private
  */
-Addon.prototype._readToc = function(addon) {
+Addon.prototype._readToc = function(addon)
+{
     var tocfile = path.join(this.$addonPath, addon, addon + '.toc');
 
     var content = this.$filesystem
@@ -75,7 +78,8 @@ Addon.prototype._readToc = function(addon) {
  * @returns {object}
  * @private
  */
-Addon.prototype._parseToc = function (toc) {
+Addon.prototype._parseToc = function (toc)
+{
     return wowtoc.parse(toc);
 }
 

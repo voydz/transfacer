@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "main": "src/browser/main.js",
   "dependencies": {
+    "fs-extra": "*",
     "jquery": "2.*",
     "bootstrap": "*",
     "bootswatch": "*",

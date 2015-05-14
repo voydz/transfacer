@@ -6,7 +6,7 @@
 
   "services": {
     "file": {
-      "path": "~/.transfacer/Interfaces"
+      "path": "/Users/felixrudat/.transfacer/Interfaces"
     },
 
     "dropbox": {
@@ -15,8 +15,7 @@
     }
   },
 
-
   "warcraft": {
-    "path": "/Applications/World of Warcraft"
+    "path": "/Applications/World\\ of\\ Warcraft"
   }
 }
